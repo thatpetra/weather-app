@@ -1,0 +1,158 @@
+html {
+  height: 100%;
+}
+
+body {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  margin-top: 20px;
+  color: #132743;
+  margin: auto;
+  max-width: 700px;
+  min-height: 100%;
+  font-family: "Figtree", sans-serif;
+}
+
+h1,
+h3,
+footer {
+  text-align: center;
+  text-transform: capitalize;
+}
+
+h1 {
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 45px;
+  position: relative;
+  bottom: 4px;
+  font-weight: bolder;
+}
+
+h3 {
+  font-weight: normal;
+  font-size: 20px;
+  margin-top: -5px;
+}
+
+h4 {
+  font-weight: normal;
+  font-size: 12px;
+  margin-top: -5px;
+}
+
+ul {
+  margin-left: -20px;
+  color: #407088;
+}
+
+li {
+  display: inline;
+  margin-right: 30px;
+}
+
+hr {
+  height: 0px;
+  border: none;
+  border-top: 2px solid #132743;
+}
+
+p,
+span {
+  font-size: 14px;
+}
+
+footer {
+  font-size: 11px;
+  margin-top: -10px;
+}
+
+.outside-border {
+  border: solid 2px #659bb9;
+  padding: 20px 30px;
+  margin: 20px;
+  border-radius: 6px;
+}
+
+.cities,
+.subheader {
+  font-weight: bold;
+}
+
+.subheader {
+  background-color: rgb(64, 112, 136, 0.1);
+  color: #407088;
+  border-radius: 4px;
+  padding: 5px;
+}
+
+.search-bar-border {
+  background: #659bb9;
+}
+
+.search-icon {
+  background: #659bb9;
+  border: #132743;
+  color: #fff;
+}
+
+.search-icon:hover {
+  background: #407088;
+  color: #fff;
+}
+
+.temperature {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 12px;
+}
+
+.celcius,
+.fahrenheit,
+.celciusFahrenheit {
+  font-size: 14px;
+  position: relative;
+  bottom: 20px;
+  padding: 1px;
+  text-decoration: none;
+  color: #132743;
+  font-weight: bolder;
+  transition: all 200ms ease;
+}
+
+.celcius:hover,
+.fahrenheit:hover {
+  cursor: pointer;
+  color: #132743;
+  opacity: 60%;
+}
+
+.weather-information,
+.cities {
+  font-size: 12px;
+}
+
+.main-weather-emoji {
+  font-size: 50px;
+  margin: 5px;
+}
+
+.weather-emojis {
+  font-size: 40px;
+}
+
+.main-weather-emoji,
+.weather-emojis,
+.fa-droplet,
+.fa-wind {
+  color: #659bb9;
+}
+
+.weekdays,
+.future-temperature,
+.weather-emojis {
+  text-align: center;
+}
