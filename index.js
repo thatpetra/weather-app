@@ -103,8 +103,8 @@ function search(event) {
 
 function showPosition(position) {
   let apiKey = "33td32abd4b4o9207f70a36fd77fdbb8";
-  let lat = position.coordinates.latitude;
-  let lon = position.coordinates.longitude;
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
   let units = "metric";
   let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}&units=${units}`;
 
