@@ -61,13 +61,11 @@ function showTheTemperature(response) {
   h3.innerHTML = location;
 
   let wind = document.querySelector("#wind");
-  let windSpeed = `Wind: ${Math.round(response.data.wind.speed)} km/h`;
+  let windSpeed = `${Math.round(response.data.wind.speed)} km/h`;
   wind.innerHTML = windSpeed;
 
   let humidity = document.querySelector("#humidity");
-  let humidityPercent = `Humidity: ${Math.round(
-    response.data.temperature.humidity
-  )}%`;
+  let humidityPercent = `${Math.round(response.data.temperature.humidity)}%`;
   humidity.innerHTML = humidityPercent;
 
   let iconElement = document.querySelector("#icon");
@@ -144,7 +142,6 @@ function defaultSearch(city) {
 let currentTime = new Date();
 
 let lastUpdated = document.querySelector("#last-updated");
-
 lastUpdated.innerHTML = formatDate(currentTime);
 
 let form = document.querySelector("#search-form");
@@ -161,4 +158,4 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 let celsiusTemperature = null;
 
-defaultSearch("New York");
+defaultSearch("Paris");

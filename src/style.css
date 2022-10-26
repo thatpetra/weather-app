@@ -64,14 +64,30 @@ span {
   font-size: 14px;
 }
 
-a {
+a,
+li {
   text-decoration: none;
   color: #132743;
+  transition: all 200ms ease;
+}
+
+a:hover,
+li:hover {
+  color: #132743;
+  opacity: 60%;
+  cursor: pointer;
 }
 
 footer {
   font-size: 11px;
   margin-top: -10px;
+}
+
+#humidity,
+#wind,
+#last-updated {
+  color: #659bb9;
+  font-weight: bold;
 }
 
 .outside-border {
@@ -135,7 +151,7 @@ footer {
 .celsiusFahrenheit {
   font-size: 14px;
   position: relative;
-  bottom: 20px;
+  bottom: 25px;
   padding: 1px;
   text-decoration: none;
   color: #132743;
