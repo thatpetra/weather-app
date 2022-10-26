@@ -119,24 +119,35 @@ footer {
   margin-top: 12px;
 }
 
-.celcius,
+.temperature .active {
+  color: #132743;
+  cursor: default;
+  opacity: 100%;
+}
+
+.temperature .active:hover {
+  color: #132743;
+  opacity: 100%;
+}
+
+.celsius,
 .fahrenheit,
-.celciusFahrenheit {
+.celsiusFahrenheit {
   font-size: 14px;
   position: relative;
   bottom: 20px;
   padding: 1px;
   text-decoration: none;
   color: #132743;
+  opacity: 50%;
   font-weight: bolder;
   transition: all 200ms ease;
 }
 
-.celcius:hover,
+.celsius:hover,
 .fahrenheit:hover {
-  cursor: pointer;
   color: #132743;
-  opacity: 60%;
+  opacity: 80%;
 }
 
 .weather-information,

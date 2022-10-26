@@ -52,12 +52,14 @@ lastUpdated.innerHTML = formatDate(currentTime);
 // Homework week 5
 
 function showTheTemperature(response) {
+  celsiusTemperature = response.data.temperature.current;
+
   let h1 = document.querySelector("h1");
   let description = response.data.condition.description;
   h1.innerHTML = description;
 
   let h2 = document.querySelector("h2");
-  let temperature = Math.round(response.data.temperature.current);
+  let temperature = Math.round(celsiusTemperature);
   h2.innerHTML = temperature;
 
   let h3 = document.querySelector("h3");
@@ -130,3 +132,39 @@ function geolocation() {
 
 let position = document.querySelector("#locationClick");
 position.addEventListener("click", geolocation);
+
+//Fahreinheit
+
+function showFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#tempChange");
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+function showCelsiusTemperature(event) {
+  event.preventDefault();
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  let temperatureElement = document.querySelector("#tempChange");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let celsiusTemperature = null;
+
+function defaultSearch(city) {
+  let apiKey = "33td32abd4b4o9207f70a36fd77fdbb8";
+  let units = "metric";
+  let url = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
+  axios.get(url).then(showTheTemperature);
+}
+
+defaultSearch("Washington");
