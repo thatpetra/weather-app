@@ -39,7 +39,7 @@ h3 {
 
 h4 {
   font-weight: normal;
-  font-size: 12px;
+  font-size: 14px;
   margin-top: -5px;
 }
 
@@ -99,16 +99,17 @@ footer {
   box-shadow: 0 30px 50px rgb(65 50 100 / 8%);
 }
 
-.cities,
-.subheader {
+.cities {
   font-weight: bold;
 }
 
 .subheader {
-  background-color: rgb(64, 112, 136, 0.1);
+  background-color: #fff;
   color: #407088;
   border-radius: 10px;
   padding: 15px;
+  margin-bottom: 25px;
+  box-shadow: 0 20px 30px rgb(65 50 100 / 8%);
 }
 
 .search-bar-border {
@@ -171,6 +172,12 @@ footer {
   font-size: 12px;
 }
 
+.weather-information {
+  margin: 0 auto;
+  padding-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 .main-weather-emoji {
   margin: -5px;
   position: relative;
@@ -192,4 +199,10 @@ footer {
 .future-temperature,
 .weather-emojis {
   text-align: center;
+}
+
+.predict-box {
+  background-color: #e3e9ef;
+  border-radius: 15px;
+  padding: 30px;
 }
