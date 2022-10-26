@@ -24,10 +24,11 @@ h1 {
 }
 
 h2 {
-  font-size: 45px;
+  font-size: 65px;
   position: relative;
   bottom: 4px;
   font-weight: bolder;
+  line-break: 1;
 }
 
 h3 {
@@ -144,15 +145,16 @@ footer {
 }
 
 .main-weather-emoji {
-  font-size: 50px;
-  margin: 5px;
+  margin: -5px;
+  position: relative;
+  bottom: 8px;
+  left: 4px;
 }
 
 .weather-emojis {
   font-size: 40px;
 }
 
-.main-weather-emoji,
 .weather-emojis,
 .fa-droplet,
 .fa-wind {
