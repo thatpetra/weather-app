@@ -43,14 +43,6 @@ function formatDate(date) {
   return formattedDate;
 }
 
-let currentTime = new Date();
-
-let lastUpdated = document.querySelector("#last-updated");
-
-lastUpdated.innerHTML = formatDate(currentTime);
-
-// Homework week 5
-
 function showTheTemperature(response) {
   celsiusTemperature = response.data.temperature.current;
 
@@ -96,8 +88,6 @@ function showTemperature() {
   axios.get(url).then(showTheTemperature);
 }
 
-//search
-
 function search(event) {
   event.preventDefault();
   let searchInput = document.querySelector("#search-result");
@@ -110,9 +100,6 @@ function search(event) {
       "Please enter a city...";
   }
 }
-
-let form = document.querySelector("#search-form");
-form.addEventListener("submit", search);
 
 //current position - currently doesnt work
 
@@ -130,11 +117,6 @@ function geolocation() {
   navigator.geolocation.getCurrentPosition(showPosition);
 }
 
-let position = document.querySelector("#locationClick");
-position.addEventListener("click", geolocation);
-
-//Fahreinheit
-
 function showFahrenheitTemperature(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#tempChange");
@@ -144,9 +126,6 @@ function showFahrenheitTemperature(event) {
   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
 }
 
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
-
 function showCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
@@ -155,11 +134,6 @@ function showCelsiusTemperature(event) {
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
 }
 
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", showCelsiusTemperature);
-
-let celsiusTemperature = null;
-
 function defaultSearch(city) {
   let apiKey = "33td32abd4b4o9207f70a36fd77fdbb8";
   let units = "metric";
@@ -167,4 +141,24 @@ function defaultSearch(city) {
   axios.get(url).then(showTheTemperature);
 }
 
-defaultSearch("Washington");
+let currentTime = new Date();
+
+let lastUpdated = document.querySelector("#last-updated");
+
+lastUpdated.innerHTML = formatDate(currentTime);
+
+let form = document.querySelector("#search-form");
+form.addEventListener("submit", search);
+
+let position = document.querySelector("#locationClick");
+position.addEventListener("click", geolocation);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", showFahrenheitTemperature);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let celsiusTemperature = null;
+
+defaultSearch("New York");
