@@ -189,15 +189,13 @@ footer {
   font-size: 40px;
 }
 
-.weather-emojis,
 .fa-droplet,
 .fa-wind {
   color: #659bb9;
 }
 
 .weekdays,
-.future-temperature,
-.weather-emojis {
+.future-temperature {
   text-align: center;
 }
 
