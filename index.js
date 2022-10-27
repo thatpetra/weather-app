@@ -69,7 +69,7 @@ function displayForecast(response) {
           <div class="forecast-temperature">
             <span class="future-temperature"> ${Math.round(
               forecastDay.temperature.day
-            )}° <span>
+            )}°<pan>
             </div>
             </div>
           `;
@@ -82,7 +82,8 @@ function displayForecast(response) {
 
 function getForecast(coordinates) {
   let apiKey = `33td32abd4b4o9207f70a36fd77fdbb8`;
-  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=metric`;
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/forecast?lon=${coordinates.longitude}&lat=${coordinates.latitude}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayForecast);
 }
