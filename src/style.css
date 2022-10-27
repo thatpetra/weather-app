@@ -21,6 +21,7 @@ footer {
 
 h1 {
   font-weight: bolder;
+  margin-top: 5px;
 }
 
 h2 {
@@ -133,7 +134,8 @@ footer {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 12px;
+  margin-top: 15px;
+  margin-bottom: 5px;
 }
 
 .temperature .active {
