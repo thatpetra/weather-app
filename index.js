@@ -43,6 +43,30 @@ function formatDate(date) {
   return formattedDate;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun", "Mon"];
+
+  let forecastHTML = `<div class="row justify-content-around weekdays">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      ` 
+          <div class="col-2">
+            <div class="weekdays">${day}</div>
+            <img class="w-100 weather-emojis" src="https://shecodes-assets.s3.amazonaws.com/api/weather/icons/clear-sky-day.png"></img>
+          <div class="forecast-temperature">
+            <span class="future-temperature"> 18° <span>
+            </div>
+            </div>
+          `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function showTheTemperature(response) {
   celsiusTemperature = response.data.temperature.current;
 
@@ -158,4 +182,5 @@ celsiusLink.addEventListener("click", showCelsiusTemperature);
 
 let celsiusTemperature = null;
 
+displayForecast();
 defaultSearch("Paris");
